@@ -53,7 +53,26 @@
 
 </head>
 <body>
-	 <main class="page lanidng-page"><center>
+	 <main class="page lanidng-page">
+	  <center>
+        <div id="carouselExampleSlidesOnly" style="width:100%;border-radius: 20px; height: 220px;" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active"style="width:95%;height:160px;border-radius:10px;background-color: red;">
+                </div>
+                <div class="carousel-item"style="width:95%;height:160px;border-radius:10px;background-color: blue;">
+                   </div>
+                <div class="carousel-item" style="width:95%;height:160px;border-radius:10px;background-color: yellow;">
+                    </div>
+            </div>
+        </div>
+    </center>
+    <style type="text/css">
+  $('.carousel').carousel({
+  interval: 2000
+})
+</style>
+	 <center>
+	 
 	 	<div style="background-color: #ffffff;border: 1px solid  #613480;width: 80%;border-radius: 20px;padding-bottom: 5px;padding-top: 5px;margin-top: 50px;"><i class="fa fa-search" style="color:grey;margin-right: 1.5%;"></i> <input style="width: 80%;outline:0;border:0px;" id="filter" type="text" placeholder="search.."></div></center>
 
 <script type="text/javascript">
