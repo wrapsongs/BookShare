@@ -100,6 +100,41 @@ if(ids>=1000){
   </script>
  <section class="portfolio-block projects-cards">
             <div class="container"><center>
+	     <div class="btn-group">
+  <button type="button" style="width: 10rem;" class="btn btn-dark dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+   &#128218;&nbsp;&nbsp;&nbsp;&nbsp; Class
+  </button>
+  <style type="text/css">
+    .dropdown-toggle::after {
+    display: none;
+}
+  </style>
+  <script type="text/javascript">
+    function all(){
+    document.getElementById("123").style.display="block";
+     document.getElementById("1234").style.display="block";
+  }
+  function raj(){
+    document.getElementById("123").style.display="none";
+     document.getElementById("1234").style.display="block";
+  }
+  function sin(){
+    document.getElementById("1234").style.display="none";
+     document.getElementById("123").style.display="block";
+  }
+  </script>
+  <div class="dropdown-menu">
+     <a class="dropdown-item" href="#">All</a>
+      <div class="dropdown-divider"></div>
+       <a class="dropdown-item" onclick="raj()">10th Standard</a>
+    <a class="dropdown-item" onclick="raj()">11th Commerce</a>
+    <a class="dropdown-item" onclick="sin()">11th Mathematics</a>
+     <a class="dropdown-item" onclick="raj()">11th Biology</a>
+    <a class="dropdown-item" onclick="sin()">12th Mathematics</a>
+     <a class="dropdown-item" onclick="raj()">12th Commerce</a>
+    <a class="dropdown-item" onclick="sin()">12th Biology</a>
+  </div>
+</div>
 <span class="row" id="demo12345"></span>
 <span class="row" id="demo1234"></span></center>
 </div></section>
