@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Home</title>
+	 <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300,400,700">
+    <link rel="stylesheet" href="assets/fonts/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/fonts/ionicons.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=ABeeZee">
+    <link rel="stylesheet" href="assets/css/Animated-Type-Heading.css">
+    <link rel="stylesheet" href="assets/css/Bold-BS4-Jumbotron-with-Particles-js-1.css">
+    <link rel="stylesheet" href="assets/css/Bold-BS4-Jumbotron-with-Particles-js.css">
+    <link rel="stylesheet" href="assets/css/Button-Hover-Animate.css">
+    <link rel="stylesheet" href="assets/css/Card-hover-affect-2.css">
+    <link rel="stylesheet" href="../cdnjs.cloudflare.com/ajax/libs/aos/2.1.1/aos.css">
+    <link rel="stylesheet" href="../cdnjs.cloudflare.com/ajax/libs/pikaday/1.6.1/css/pikaday.min.css">
+    <link rel="stylesheet" href="assets/css/Parallax-Scroll-Effect.css">
+    <link rel="stylesheet" href="assets/css/Responsive-footer-1.css">
+    <link rel="stylesheet" href="assets/css/Responsive-footer.css">
+    <link rel="stylesheet" href="assets/css/Swiper-Slider-Card-For-Blog-Or-Product-1.css">
+    <link rel="stylesheet" href="assets/css/Swiper-Slider-Card-For-Blog-Or-Product.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script data-ad-client="ca-pub-1573808704132942" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js">
+        
+    </script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+ 
+<script type="text/javascript">
+       $("#filter").keyup(function() {
+
+      // Retrieve the input field text and reset the count to zero
+      var filter = $(this).val(),
+        count = 0;
+
+      // Loop through the comment list
+      $('#results div').each(function() {
+
+
+        // If the list item does not contain the text phrase fade it out
+        if ($(this).text().search(new RegExp(filter, "i")) < 0) {
+          $(this).hide();  // MY CHANGE
+
+          // Show the list item if the phrase matches and increase the count by 1
+        } else {
+          $(this).show(); // MY CHANGE
+          count++;
+        }
+
+      });
+
+    });
+</script>
+
+</head>
+<body>
+	 <main class="page lanidng-page"><center>
+	 	<div style="background-color: #ffffff;border: 1px solid  #613480;width: 80%;border-radius: 20px;padding-bottom: 5px;padding-top: 5px;margin-top: 50px;"><i class="fa fa-search" style="color:grey;margin-right: 1.5%;"></i> <input style="width: 80%;outline:0;border:0px;" id="filter" type="text" placeholder="search.."></div></center>
+
+<script type="text/javascript">
+  $.getJSON("https://spreadsheets.google.com/feeds/list/1WG_OnowE5jBf7H5L9RLa42SNWVCYMRyt0nrOYAuJsQ4/opww3xr/public/values?alt=json", function (data) {
+
+      var sheetData = data.feed.entry;
+
+        
+      for (i = 0; i < sheetData.length; i++) {
+
+     
+  var name = data.feed.entry[i].gsx$name.$t;
+  var phone = data.feed.entry[i].gsx$mobile.$t;
+  var  ur= data.feed.entry[i].gsx$nuafjsk.$t;
+var ver = data.feed.entry[i].gsx$verify.$t;
+var im = data.feed.entry[i].gsx$imagelink.$t;
+if(im==""){
+  im="1IowOKI3b-0TeHU564IGQpmE35TWcDX14"
+}
+var adrs = data.feed.entry[i].gsx$address.$t;
+var loc = data.feed.entry[i].gsx$location.$t;
+var userImage = " https://drive.google.com/thumbnail?id=" + im ;
+var link = phone+".html";
+var ids=0;
+if(loc=="Rajpura"){
+var ids=i+1;
+}
+if(loc=="Sindhi Basti"){
+var ids=i+1000;}
+
+if(ver==1){
+if(ids<1000){
+
+        document.getElementById('demo1234').innerHTML += ('<div class="col-md-3 col-lg-2" id='+ids+'>'+'<a href='+link+'>'+'<div style="background-color: #21D4FD;color:#ffffff;background-image: linear-gradient(19deg, #21D4FD 0%, #B721FF 100%);height:260px; width:180px;border-radius:10px;box-shadow:3px 3px 6px grey;margin-top:20px;" class="card-img-top scale-on-hover">'+'<img style=\"height:120px; width:180px;border-radius:10px 10px 0px 0px;\" alt="Card Image" src='+userImage+'>'+'<div style=\" font-size:15px;margin-top:10px; \">'+name+'</div>'+'<div style=\" font-size:10px;margin-top:10px; \">'+phone+'</div>'+'<div style=\" font-size:10px;margin-top:10px;\">'+"Owner : "+ur+'</div>'+'<div style=\" font-size:8px;margin-top:10px; \">'+"Address : "+adrs+"zone:"+ids+'</div>'+'</div>'+'</a>'+'</div>');
+}
+if(ids>=1000){
+    document.getElementById('demo12345').innerHTML += ('<div class="col-md-3 col-lg-2" id='+ids+'>'+'<a href='+link+'>'+'<div style="background-color: #21D4FD;color:#ffffff;background-image: linear-gradient(19deg, #21D4FD 0%, #B721FF 100%);height:260px; width:180px;border-radius:10px;box-shadow:3px 3px 6px grey;margin-top:20px;" class="card-img-top scale-on-hover">'+'<img style=\"height:120px; width:180px;border-radius:10px 10px 0px 0px;\" alt="Card Image" src='+userImage+'>'+'<div style=\" font-size:15px;margin-top:10px; \">'+name+'</div>'+'<div style=\" font-size:10px;margin-top:10px; \">'+phone+'</div>'+'<div style=\" font-size:10px;margin-top:10px;\">'+"Owner : "+ur+'</div>'+'<div style=\" font-size:8px;margin-top:10px; \">'+"Address : "+adrs+"zone:"+ids+'</div>'+'</div>'+'</a>'+'</div>');
+} 
+}
+} 
+    });
+
+  
+  </script>
+ <section class="portfolio-block projects-cards">
+            <div class="container"><center>
+<span class="row" id="demo12345"></span>
+<span class="row" id="demo1234"></span></center>
+</div></section>
+</main>
+</body>
+  <script src="assets/js/jquery.min.js"></script>
+</html>
